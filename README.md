@@ -11,18 +11,18 @@ In today's data-driven world, understanding customers' diverse needs and prefere
 
 The first step is to get an overview of the dataset. Here are the first five rows of the dataset
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c158e077-3adc-4677-b019-df5cc84c95f3/Untitled.png)
+![Untitled](Image1/1.png)
 
 Then summarizing the dataset, including its size, column names, and any missing values.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e1911e3c-8329-4890-b62b-396034eae2e8/Untitled.png)
+![Untitled](Image1/2.png)
 
 From this information, we can gather the following:
 
 - The dataset does not contain any missing values (all columns have 200 non-null values).
 - The 'customerID' column is a unique identifier for each customer and is stored as integers.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/19151295-c7a8-4173-9a97-b26be31c1025/Untitled.png)
+![Untitled](Image1/3.png)
     
 - The 'Gender' column represents the gender identity of the customers, and it contains categorical data.
 - The 'Age' column represents the age of the customers, and it is stored as integers.
@@ -35,17 +35,17 @@ I calculated basic statistics to gain an understanding of the dataset's overall 
 
 After reading and loading the dataset, we computed basic statistics for the numeric columns: 'Annual Income (k$)’ and 'Spending Score'. These basic statistics give us a preliminary understanding of the dataset's characteristics and serve as a starting point for further exploration and analysis.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0506d0f-52df-40ef-afcf-5029f75a6050/Untitled.png)
+![Untitled](Image1/4.png)
 
 ### Distribution of Numeric Variables
 
 I examine the distributions of numeric variables, such as 'Age', 'Annual Income (k$)’, and 'Spending Score'. By visualizing these distributions, we can determine their shapes, and ranges, and identify any outliers.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d05a1729-ed98-471e-9213-8a89b3392116/Untitled.png)
+![Untitled](Image1/5.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f8ec4bfe-f113-4419-9e35-dcd021ec948d/Untitled.png)
+![Untitled](Image1/6.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a361dfe3-1cb8-40ed-85b6-8c7ae3d8ef42/Untitled.png)
+![Untitled](Image1/7.png)
 
 From these histograms, we can conclude we have a normal distribution i.e variable has a relatively narrow range and moderate variability (most observations clustered around the mean). 
 
@@ -57,11 +57,11 @@ Started the cluster analysis using one variable(**Univariate)**, the 'Annual Inc
 
 I used Kmeans elbow method to determine the number of clusters appropriate for the segmentation of the customer 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7bbd5d03-33ae-46b9-8757-082a2d9483bd/Untitled.png)
+![Untitled](Image1/8.png)
 
 We can see from the elbow that 3 is the appropriate cluster we can segment our customers into.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9220b836-758d-4aed-930b-a04c7349eeeb/Untitled.png)
+![Untitled](Image1/9.png)
 
 Cluster 0 Annual income  is within 80-60k$
 
@@ -76,12 +76,11 @@ Spending Score (1-100) to get the appropriate cluster to segment the customers
 
 I used Kmeans elbow method to determine the number of clusters appropriate for the segmentation of the customer
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52d25585-4172-495b-bbc2-f569b7ac70bf/Untitled.png)
+![Untitled](Image1/10.png)
 
 We can see from the elbow that 5 is where we had a good elbow and 5 is the appropriate cluster we can segment our customers based on their Annual Income (k$) and Spending Score (1-100)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/133d1e26-a27c-4439-885a-204c0f3b3f45/Untitled.png)
-
+![Untitled](Image1/11.png)
 The scatter plot shows the five clusters
 
 Cluster 0  has a low Spending Score and low annual income
@@ -96,7 +95,7 @@ Cluster 4  has a high Spending Score but a low annual income
 
  I further analyzed each cluster by Gender and age  
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a81cd1a0-a1ed-4c33-85a6-298a823c3dd5/Untitled.png)
+![Untitled](Image1/12.png)
 
 Recommendation 
 
